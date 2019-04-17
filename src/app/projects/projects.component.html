@@ -1,0 +1,39 @@
+<section class="view project morpheus-den-gradient" style="background-color: #eceff1;">
+  <div class="container">
+    <div *ngFor="let project of projects" style="padding-bottom: 30px;">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-content">
+            <div class="row" style="padding-bottom: 5px;">
+              <div class="col-8">
+                <h3>{{project.title}}</h3>
+                <hr>
+              </div>
+            </div>
+            <div class="row" style="padding-bottom: 15px;">
+              <div class="col-8 text-justify">
+                <span>{{project.description}}</span>
+              </div>
+              <div class="col-2 offset-1">
+                <a href="{{project.link}}" target="_blank">
+                  <mdb-icon fab icon="github" size="6x" class="mr-md-5 mr-3"></mdb-icon>
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8">
+                <h5>Technologies and Frameworks: </h5>
+                <span *ngFor="let technologies of project.technologies">
+                  <span class="badge badge-pill badge-info">{{technologies}}</span>&nbsp;
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

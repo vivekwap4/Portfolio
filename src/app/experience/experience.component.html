@@ -1,0 +1,42 @@
+<section class="view experience near-moon-gradient" style="background-color: #eceff1;">
+  <div class="container">
+    <div *ngFor="let experience of experiences" style="padding-bottom: 30px;">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-content">
+            <div class="row" style="padding-bottom: 5px;">
+              <div class="col-8">
+                <h3><strong>{{experience.company}}</strong></h3>
+                <h5>{{experience.position}}</h5>
+              </div>
+              <div class="col-3 offset-1">
+                <span>{{experience.timeperiod}}</span>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-6">
+              </div>
+            </div>
+            <div class="row" style="padding-bottom: 40px;">
+              <div class="col-8 text-justify">
+                <span>{{experience.description}}</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8">
+                <h6>Worked on: </h6>
+                <span *ngFor="let technologies of experience.technologies">
+                  <span class="badge badge-pill badge-info">{{technologies}}</span>&nbsp;
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
